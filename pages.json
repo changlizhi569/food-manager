@@ -1,0 +1,67 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/ingredient/add",
+			"style": {
+				"navigationBarTitleText": "添加食材",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/ingredient/detail",
+			"style": {
+				"navigationBarTitleText": "食材详情",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/ingredient/edit",
+			"style": {
+				"navigationBarTitleText": "编辑食材",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/settings/index",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/settings/fridge",
+			"style": {
+				"navigationBarTitleText": "冰箱设置",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/settings/ingredient-detail",
+			"style": {
+				"navigationBarTitleText": "食材卡片设置",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/settings/category",
+			"style": {
+				"navigationBarTitleText": "食材种类管理",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "食材管理器",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}

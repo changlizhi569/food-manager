@@ -1,0 +1,288 @@
+
+/* 悬浮窗容器 - 透明背景 */
+.modal-container[data-v-06f914de] {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 999;
+	pointer-events: none;
+}
+
+/* 悬浮卡片 */
+.modal-card[data-v-06f914de] {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 92%;
+	max-width: 20rem;
+	max-height: 88vh;
+	background-color: #fff;
+	border-radius: 1rem;
+	box-shadow: 0 0.375rem 1.5rem rgba(0, 0, 0, 0.15);
+	display: flex;
+	flex-direction: column;
+	pointer-events: auto;
+}
+
+/* 卡片头部 */
+.card-header[data-v-06f914de] {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 1.125rem;
+	border-bottom: 0.03125rem solid #f0f4f0;
+}
+.card-title[data-v-06f914de] {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: #2c3e50;
+}
+.close-btn[data-v-06f914de] {
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	transition: all 0.2s ease;
+}
+.close-btn[data-v-06f914de]:active {
+	background-color: #f0f4f0;
+}
+.close-icon[data-v-06f914de] {
+	font-size: 1.5rem;
+	color: #5a6c7d;
+	line-height: 1;
+}
+
+/* 卡片内容 */
+.card-content[data-v-06f914de] {
+	max-height: calc(90vh - 5rem);
+	padding: 0.625rem;
+	overflow-y: auto;
+	box-sizing: border-box;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* 滚动条样式 */
+.card-content[data-v-06f914de]::-webkit-scrollbar {
+	width: 0.1875rem;
+}
+.card-content[data-v-06f914de]::-webkit-scrollbar-track {
+	background: #f1f1f1;
+	border-radius: 0.09375rem;
+}
+.card-content[data-v-06f914de]::-webkit-scrollbar-thumb {
+	background: #c1c1c1;
+	border-radius: 0.09375rem;
+}
+.card-content[data-v-06f914de]::-webkit-scrollbar-thumb:hover {
+	background: #a8a8a8;
+}
+
+/* 创建按钮区域 */
+.create-section[data-v-06f914de] {
+	margin-bottom: 0.75rem;
+}
+.create-btn[data-v-06f914de] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.75rem;
+	background: linear-gradient(135deg, #4CAF50, #45a049);
+	border-radius: 0.5rem;
+	box-shadow: 0 0.125rem 0.375rem rgba(76, 175, 80, 0.3);
+	transition: all 0.2s ease;
+}
+.create-btn[data-v-06f914de]:active {
+	transform: translateY(0.0625rem);
+	box-shadow: 0 0.0625rem 0.25rem rgba(76, 175, 80, 0.3);
+}
+.create-icon[data-v-06f914de] {
+	font-size: 1rem;
+}
+.create-text[data-v-06f914de] {
+	font-size: 1rem;
+	color: #fff;
+	font-weight: 600;
+}
+
+/* 冰箱列表 */
+.fridge-list[data-v-06f914de] {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+}
+.fridge-card[data-v-06f914de] {
+	background-color: #f8f9fa;
+	border-radius: 0.625rem;
+	overflow: hidden;
+	box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.06);
+}
+
+/* 冰箱头部 */
+.fridge-header[data-v-06f914de] {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75rem 0.875rem;
+	background-color: #e8f5e9;
+	border-bottom: 0.03125rem solid #c8e6c9;
+}
+.fridge-info[data-v-06f914de] {
+	flex: 1;
+}
+.fridge-name[data-v-06f914de] {
+	font-size: 1rem;
+	font-weight: 600;
+	color: #2e7d32;
+	text-shadow: 0 0.03125rem 0.03125rem rgba(0, 0, 0, 0.05);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.fridge-stats[data-v-06f914de] {
+	display: block;
+	font-size: 0.75rem;
+	color: #5a6c7d;
+	margin-top: 0.25rem;
+	font-weight: 500;
+}
+.fridge-actions[data-v-06f914de] {
+	display: flex;
+	gap: 0.5rem;
+}
+.action-btn[data-v-06f914de] {
+	width: 1.75rem;
+	height: 1.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1rem;
+	border-radius: 0.375rem;
+	background-color: #fff;
+	box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.08);
+	transition: all 0.2s ease;
+}
+.action-btn.add[data-v-06f914de] {
+	color: #4CAF50;
+}
+.action-btn.add[data-v-06f914de]:active {
+	background-color: #e8f5e9;
+	transform: scale(0.95);
+}
+.action-btn.delete[data-v-06f914de] {
+	color: #f44336;
+}
+.action-btn.delete[data-v-06f914de]:active {
+	background-color: #ffebee;
+	transform: scale(0.95);
+}
+
+/* 分区列表 */
+.partition-list[data-v-06f914de] {
+	padding: 0.625rem 0.75rem;
+}
+.partition-item[data-v-06f914de] {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 0;
+	border-bottom: 0.03125rem solid #e9ecef;
+}
+.partition-item[data-v-06f914de]:last-child {
+	border-bottom: none;
+}
+.partition-info[data-v-06f914de] {
+	flex: 1;
+}
+.partition-name[data-v-06f914de] {
+	font-size: 0.9375rem;
+	color: #2c3e50;
+	font-weight: 500;
+	text-shadow: 0 0.03125rem 0.03125rem rgba(0, 0, 0, 0.05);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.partition-layers[data-v-06f914de] {
+	display: flex;
+	margin-top: 0.25rem;
+}
+.layer-display[data-v-06f914de] {
+	padding: 0.25rem 0.5rem;
+	background-color: #e3f2fd;
+	border-radius: 0.25rem;
+	font-size: 0.75rem;
+	color: #1976d2;
+	font-weight: 500;
+}
+.picker-value[data-v-06f914de] {
+	padding: 0.5rem 0.75rem;
+	background-color: #fff;
+	border: 0.0625rem solid #e0e0e0;
+	border-radius: 0.25rem;
+	font-size: 0.875rem;
+	color: #333;
+	min-width: 3.125rem;
+	text-align: center;
+	box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.06);
+}
+.delete-btn[data-v-06f914de] {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.875rem;
+	color: #f44336;
+	border-radius: 0.25rem;
+	transition: all 0.2s ease;
+}
+.delete-btn[data-v-06f914de]:active {
+	background-color: #ffebee;
+	transform: scale(0.95);
+}
+
+/* 编辑状态 */
+.name-edit[data-v-06f914de], .field-edit[data-v-06f914de] {
+	display: flex;
+	align-items: center;
+	gap: 0.375rem;
+}
+.name-input[data-v-06f914de], .field-input[data-v-06f914de] {
+	flex: 1;
+	padding: 0.5rem 0.625rem;
+	border: 0.0625rem solid #4CAF50;
+	border-radius: 0.375rem;
+	font-size: 0.9375rem;
+	background-color: #fff;
+	box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.06);
+}
+.field-input.small[data-v-06f914de] {
+	width: 3.75rem;
+	flex: none;
+	text-align: center;
+}
+.field-label[data-v-06f914de] {
+	font-size: 0.875rem;
+	color: #5a6c7d;
+	font-weight: 500;
+}
+.save-btn[data-v-06f914de] {
+	padding: 0.5rem 0.75rem;
+	background: linear-gradient(135deg, #4CAF50, #45a049);
+	color: #fff;
+	border-radius: 0.375rem;
+	font-size: 0.8125rem;
+	font-weight: 500;
+	white-space: nowrap;
+	box-shadow: 0 0.0625rem 0.25rem rgba(76, 175, 80, 0.3);
+	transition: all 0.2s ease;
+}
+.save-btn[data-v-06f914de]:active {
+	transform: translateY(0.0625rem);
+	box-shadow: 0 0.03125rem 0.125rem rgba(76, 175, 80, 0.3);
+}

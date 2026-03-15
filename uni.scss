@@ -1,0 +1,176 @@
+/**
+ * 全局SCSS变量
+ * 统一卡片式设计风格
+ */
+
+// 主色调
+$primary-color: #4CAF50;
+$primary-light: #81C784;
+$primary-dark: #388E3C;
+
+// 背景色
+$bg-primary: #f8f9fa;
+$bg-secondary: #ffffff;
+$bg-tertiary: #f0f4f0;
+
+// 文字颜色
+$text-primary: #2c3e50;
+$text-secondary: #5a6c7d;
+$text-tertiary: #95a5a6;
+
+// 边框颜色
+$border-color: #e8ecef;
+$border-light: #f0f4f8;
+
+// 阴影
+$shadow-sm: 0 2rpx 8rpx rgba(0, 0, 0, 0.06);
+$shadow-md: 0 4rpx 16rpx rgba(0, 0, 0, 0.08);
+$shadow-lg: 0 8rpx 32rpx rgba(0, 0, 0, 0.12);
+$shadow-xl: 0 12rpx 48rpx rgba(0, 0, 0, 0.15);
+
+// 圆角
+$radius-sm: 12rpx;
+$radius-md: 16rpx;
+$radius-lg: 24rpx;
+$radius-xl: 32rpx;
+$radius-full: 50%;
+
+// 间距
+$spacing-xs: 8rpx;
+$spacing-sm: 16rpx;
+$spacing-md: 24rpx;
+$spacing-lg: 32rpx;
+$spacing-xl: 48rpx;
+
+// 字体大小
+$font-xs: 22rpx;
+$font-sm: 24rpx;
+$font-base: 28rpx;
+$font-md: 30rpx;
+$font-lg: 32rpx;
+$font-xl: 36rpx;
+
+// 响应式断点（rpx单位）
+$screen-sm: 375px;   // 手机
+$screen-md: 768px;   // iPad竖屏
+$screen-lg: 1024px;  // iPad横屏
+$screen-xl: 1366px;  // 大屏
+
+// 卡片基础样式
+@mixin card-base {
+  background-color: $bg-secondary;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+}
+
+// 按钮基础样式
+@mixin btn-base {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-md;
+  transition: all 0.2s ease;
+  
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// 输入框基础样式
+@mixin input-base {
+  width: 100%;
+  padding: 20rpx 24rpx;
+  background-color: $bg-primary;
+  border: 2rpx solid $border-color;
+  border-radius: $radius-md;
+  font-size: $font-base;
+  color: $text-primary;
+  transition: all 0.2s ease;
+  
+  &:focus {
+    border-color: $primary-color;
+    background-color: $bg-secondary;
+    box-shadow: 0 0 0 4rpx rgba(76, 175, 80, 0.1);
+  }
+}
+
+// 悬浮窗卡片样式
+@mixin modal-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $bg-secondary;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-xl;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  
+  /* 响应式宽度 */
+  width: 92%;
+  max-width: 640rpx;
+  max-height: 88vh;
+  
+  /* 横屏iPad适配 */
+  @media screen and (min-width: 768px) {
+    width: 80%;
+    max-width: 720rpx;
+  }
+  
+  @media screen and (min-width: 1024px) {
+    width: 70%;
+    max-width: 800rpx;
+  }
+}
+
+// 标签样式
+@mixin tag-base {
+  display: inline-flex;
+  align-items: center;
+  padding: 12rpx 24rpx;
+  background-color: $bg-tertiary;
+  border-radius: 32rpx;
+  font-size: $font-sm;
+  color: $text-secondary;
+  transition: all 0.2s ease;
+  
+  &.active {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}
+
+// 选项卡样式
+@mixin tab-base {
+  padding: 16rpx 32rpx;
+  border-radius: 32rpx;
+  font-size: $font-base;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  background-color: $bg-tertiary;
+  color: $text-secondary;
+  
+  &.active {
+    background-color: $primary-color;
+    color: #fff;
+    box-shadow: 0 4rpx 12rpx rgba(76, 175, 80, 0.3);
+  }
+}
+
+// 设置项样式
+@mixin setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24rpx;
+  background-color: $bg-secondary;
+  border-radius: $radius-md;
+  margin-bottom: 16rpx;
+  box-shadow: $shadow-sm;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

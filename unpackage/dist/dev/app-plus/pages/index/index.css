@@ -1,0 +1,567 @@
+
+.container[data-v-1cf27b2a] {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background-color: #f8f9fa;
+}
+
+/* 顶部导航栏 */
+.header[data-v-1cf27b2a] {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	background-color: #fff;
+	box-shadow: 0 0.0625rem 0.5rem rgba(0, 0, 0, 0.08);
+	border-radius: 0 0 0.75rem 0.75rem;
+}
+.header-left[data-v-1cf27b2a] {
+	flex-shrink: 0;
+	margin-right: 0.75rem;
+}
+.fridge-selector-trigger[data-v-1cf27b2a] {
+	display: flex;
+	align-items: center;
+	gap: 0.375rem;
+	padding: 0.5rem 0.75rem;
+	background-color: #f0f4f0;
+	border-radius: 1rem;
+	transition: all 0.2s ease;
+}
+.fridge-selector-trigger[data-v-1cf27b2a]:active {
+	background-color: #e8f5e9;
+	transform: scale(0.98);
+}
+.fridge-name[data-v-1cf27b2a] {
+	font-size: 0.9375rem;
+	font-weight: 600;
+	color: #2c3e50;
+	max-width: 6.25rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.dropdown-icon[data-v-1cf27b2a] {
+	font-size: 0.625rem;
+	color: #4CAF50;
+}
+.header-center[data-v-1cf27b2a] {
+	flex: 1;
+	max-width: 15rem;
+}
+.search-container[data-v-1cf27b2a] {
+	width: 100%;
+}
+.search-box[data-v-1cf27b2a] {
+	display: flex;
+	align-items: center;
+	background-color: #f8f9fa;
+	border: 0.0625rem solid #e8ecef;
+	border-radius: 1rem;
+	padding: 0.5rem 0.75rem;
+	transition: all 0.2s ease;
+}
+.search-box[data-v-1cf27b2a]:focus-within {
+	border-color: #4CAF50;
+	background-color: #fff;
+	box-shadow: 0 0 0 0.125rem rgba(76, 175, 80, 0.1);
+}
+.search-box uni-input[data-v-1cf27b2a] {
+	flex: 1;
+	border: none;
+	background: transparent;
+	font-size: 0.875rem;
+	padding: 0.25rem 0.5rem;
+	color: #2c3e50;
+}
+.search-btn[data-v-1cf27b2a] {
+	width: 1.5rem;
+	height: 1.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-left: 0.25rem;
+	border-radius: 50%;
+	transition: all 0.2s ease;
+}
+.search-btn[data-v-1cf27b2a]:active {
+	background-color: rgba(76, 175, 80, 0.1);
+}
+.search-icon[data-v-1cf27b2a] {
+	font-size: 0.875rem;
+	color: #5a6c7d;
+}
+.header-right[data-v-1cf27b2a] {
+	flex-shrink: 0;
+	margin-left: 0.625rem;
+}
+.add-btn[data-v-1cf27b2a] {
+	width: 2.25rem;
+	height: 2.25rem;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #4CAF50, #45a049);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 0.1875rem 0.625rem rgba(76, 175, 80, 0.4);
+	transition: all 0.2s ease;
+}
+.add-btn[data-v-1cf27b2a]:active {
+	transform: scale(0.95);
+	box-shadow: 0 0.125rem 0.375rem rgba(76, 175, 80, 0.3);
+}
+.add-icon[data-v-1cf27b2a] {
+	color: #fff;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1;
+	text-align: center;
+	display: block;
+}
+
+/* 分区选择器 */
+.partition-selector[data-v-1cf27b2a] {
+	background-color: #fff;
+	padding: 0.75rem 1rem;
+	margin-top: 0.5rem;
+	border-radius: 0.75rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.06);
+}
+.selector-label[data-v-1cf27b2a] {
+	font-size: 0.8125rem;
+	color: #5a6c7d;
+	margin-bottom: 0.5rem;
+	font-weight: 500;
+}
+.partition-tabs[data-v-1cf27b2a] {
+	display: flex;
+	gap: 0.5rem;
+	white-space: nowrap;
+}
+.partition-tab[data-v-1cf27b2a] {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.375rem;
+	padding: 0.5rem 0.875rem;
+	border-radius: 1rem;
+	background-color: #f0f4f0;
+	transition: all 0.2s ease;
+}
+.partition-tab.active[data-v-1cf27b2a] {
+	background: linear-gradient(135deg, #4CAF50, #45a049);
+	box-shadow: 0 0.125rem 0.375rem rgba(76, 175, 80, 0.3);
+}
+.tab-text[data-v-1cf27b2a] {
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: #5a6c7d;
+}
+.partition-tab.active .tab-text[data-v-1cf27b2a] {
+	color: #fff;
+}
+.tab-badge[data-v-1cf27b2a] {
+	font-size: 0.625rem;
+	color: #4CAF50;
+	background-color: #fff;
+	padding: 0.125rem 0.375rem;
+	border-radius: 0.5rem;
+}
+.partition-tab.active .tab-badge[data-v-1cf27b2a] {
+	color: #4CAF50;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* 层级选项卡 */
+.layer-tabs[data-v-1cf27b2a] {
+	background-color: #fff;
+	padding: 0.75rem 1rem;
+	margin-top: 0.5rem;
+	border-radius: 0.75rem;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+	box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.06);
+}
+.layer-tabs-container[data-v-1cf27b2a] {
+	display: flex;
+	gap: 0.5rem;
+	white-space: nowrap;
+}
+.layer-tab[data-v-1cf27b2a] {
+	display: inline-flex;
+	padding: 0.5rem 1rem;
+	border-radius: 1rem;
+	background-color: #f0f4f0;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: #5a6c7d;
+	transition: all 0.2s ease;
+}
+.layer-tab.active[data-v-1cf27b2a] {
+	background: linear-gradient(135deg, #4CAF50, #45a049);
+	color: #fff;
+	box-shadow: 0 0.125rem 0.375rem rgba(76, 175, 80, 0.3);
+}
+.layer-tab[data-v-1cf27b2a]:active {
+	transform: scale(0.98);
+}
+
+/* 主要内容区域 */
+.main-content[data-v-1cf27b2a] {
+	padding: 0.75rem 1rem;
+	min-height: calc(100vh - 12.5rem);
+}
+
+/* 搜索结果标题 */
+.search-result-header[data-v-1cf27b2a] {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #fff;
+	padding: 0.75rem 1rem;
+	border-radius: 0.75rem;
+	margin-bottom: 0.75rem;
+	box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.08);
+}
+.search-result-title[data-v-1cf27b2a] {
+	font-weight: 600;
+	font-size: 0.9375rem;
+	color: #2c3e50;
+}
+.search-result-content[data-v-1cf27b2a] {
+	flex: 1;
+	margin: 0 0.75rem;
+	font-size: 0.8125rem;
+	color: #5a6c7d;
+}
+.clear-search-btn[data-v-1cf27b2a] {
+	background-color: #f0f4f0;
+	padding: 0.375rem 0.75rem;
+	border-radius: 0.5rem;
+	font-size: 0.8125rem;
+	color: #4CAF50;
+	font-weight: 500;
+	transition: all 0.2s ease;
+}
+.clear-search-btn[data-v-1cf27b2a]:active {
+	background-color: #e8f5e9;
+	transform: scale(0.98);
+}
+
+/* 食材列表 */
+.ingredient-list[data-v-1cf27b2a] {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	/* 移除 gap，使用 space-between 实现两端对齐 */
+}
+.ingredient-card[data-v-1cf27b2a] {
+	display: block;
+	width: 100%;
+	padding: 0.75rem;
+	margin-bottom: 0;
+	background-color: #fff;
+	border-radius: 0.75rem;
+	box-shadow: 0 0.09375rem 0.375rem rgba(0, 0, 0, 0.06);
+	box-sizing: border-box;
+}
+
+/* 小屏手机 - 每行1个 */
+@media screen and (max-width: 374px) {
+.ingredient-card[data-v-1cf27b2a] {
+		width: 100%;
+}
+}
+
+/* 大屏手机 - 每行2个 */
+@media screen and (min-width: 375px) and (max-width: 480px) {
+.ingredient-card[data-v-1cf27b2a] {
+		width: 48%;
+}
+}
+
+/* 小平板/大手机 - 每行2个 */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+.ingredient-card[data-v-1cf27b2a] {
+		width: 48%;
+}
+}
+
+/* 横屏平板 - 每行3个 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+.ingredient-card[data-v-1cf27b2a] {
+		width: 31%;
+}
+}
+
+/* 大屏平板 - 每行4个 */
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+.ingredient-card[data-v-1cf27b2a] {
+		width: 23%;
+}
+}
+
+/* 超大屏 - 每行5个 */
+@media screen and (min-width: 1440px) {
+.ingredient-card[data-v-1cf27b2a] {
+		width: 18%;
+}
+}
+.ingredient-image-container[data-v-1cf27b2a] {
+	width: 100%;
+	height: 7.5rem;
+	border-radius: 0.5625rem;
+	overflow: hidden;
+}
+.ingredient-image[data-v-1cf27b2a] {
+	width: 100%;
+	height: 100%;
+}
+.ingredient-info[data-v-1cf27b2a] {
+	padding: 0.5625rem 0.375rem 0.375rem;
+}
+.ingredient-name[data-v-1cf27b2a] {
+	font-size: 1.40625rem;
+	font-weight: 500;
+	margin-bottom: 0.375rem;
+	color: #2c3e50;
+}
+.ingredient-type[data-v-1cf27b2a] {
+	display: flex;
+	align-items: center;
+	gap: 0.375rem;
+	margin-bottom: 0.25rem;
+}
+.type-icon[data-v-1cf27b2a] {
+	font-size: 1rem;
+}
+.type-text[data-v-1cf27b2a] {
+	font-size: 1rem;
+	color: #4CAF50;
+	background-color: #f0f4f0;
+	padding: 0.125rem 0.5rem;
+	border-radius: 0.5rem;
+}
+.ingredient-detail[data-v-1cf27b2a] {
+	display: flex;
+	flex-direction: column;
+	gap: 0.1875rem;
+}
+.detail-item[data-v-1cf27b2a] {
+	display: flex;
+	align-items: center;
+	gap: 0.375rem;
+}
+.detail-icon[data-v-1cf27b2a] {
+	font-size: 1.125rem;
+}
+.detail-text[data-v-1cf27b2a] {
+	font-size: 1.125rem;
+	color: #5a6c7d;
+}
+.shelf-life-text[data-v-1cf27b2a] {
+	font-weight: 600;
+}
+
+/* 空状态 */
+.empty-state[data-v-1cf27b2a] {
+	display: block;
+	padding: 1.25rem;
+	text-align: center;
+}
+.empty-icon[data-v-1cf27b2a] {
+	font-size: 1.875rem;
+	margin-bottom: 0.625rem;
+}
+.empty-text[data-v-1cf27b2a] {
+	font-size: 0.875rem;
+}
+
+/* 侧边栏 */
+.sidebar[data-v-1cf27b2a] {
+	position: fixed;
+	top: 0;
+	left: -85%;
+	width: 85%;
+	height: 100vh;
+	background-color: #fff;
+	box-shadow: 0.1875rem 0 0.75rem rgba(0, 0, 0, 0.12);
+	z-index: 1000;
+	transition: left 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	border-radius: 0 1rem 1rem 0;
+}
+.sidebar.show[data-v-1cf27b2a] {
+	left: 0;
+}
+.sidebar-header[data-v-1cf27b2a] {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1.5rem 1rem 1rem;
+	border-bottom: 0.03125rem solid #f0f4f0;
+}
+.sidebar-title[data-v-1cf27b2a] {
+	font-size: 1.125rem;
+	font-weight: 600;
+	color: #2c3e50;
+}
+.close-sidebar-btn[data-v-1cf27b2a] {
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	transition: all 0.2s ease;
+}
+.close-sidebar-btn[data-v-1cf27b2a]:active {
+	background-color: #f0f4f0;
+}
+.close-icon[data-v-1cf27b2a] {
+	font-size: 1.5rem;
+	color: #5a6c7d;
+	line-height: 1;
+}
+.sidebar-content[data-v-1cf27b2a] {
+	flex: 1;
+	padding: 1rem 0;
+	overflow-y: auto;
+}
+.fridge-section[data-v-1cf27b2a] {
+	margin-bottom: 1.25rem;
+}
+.fridge-header[data-v-1cf27b2a] {
+	padding: 0.75rem 1rem;
+}
+.fridge-name[data-v-1cf27b2a] {
+	font-size: 1rem;
+	font-weight: 600;
+	color: #2c3e50;
+}
+.partition-list[data-v-1cf27b2a] {
+	padding: 0 1rem;
+}
+.partition-item[data-v-1cf27b2a] {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.75rem 1rem;
+	margin: 0.375rem 0;
+	border-radius: 0.5rem;
+	background-color: #f8f9fa;
+	transition: all 0.2s ease;
+	box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.04);
+}
+.partition-item.active[data-v-1cf27b2a] {
+	background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+	box-shadow: 0 0.125rem 0.375rem rgba(76, 175, 80, 0.15);
+}
+.partition-item.all[data-v-1cf27b2a] {
+	background-color: #f0f4f0;
+	font-weight: 500;
+}
+.partition-item.all.active[data-v-1cf27b2a] {
+	background: linear-gradient(135deg, #4CAF50, #45a049);
+}
+.partition-item.all.active .partition-text[data-v-1cf27b2a] {
+	color: #fff;
+}
+.partition-text[data-v-1cf27b2a] {
+	font-size: 0.875rem;
+	color: #5a6c7d;
+}
+.partition-item.active .partition-text[data-v-1cf27b2a] {
+	color: #4CAF50;
+	font-weight: 500;
+}
+.partition-layers[data-v-1cf27b2a] {
+	font-size: 0.6875rem;
+	color: #95a5a6;
+	background-color: #fff;
+	padding: 0.1875rem 0.5rem;
+	border-radius: 0.5rem;
+}
+.sidebar-footer[data-v-1cf27b2a] {
+	padding: 1rem;
+	border-top: 0.03125rem solid #f0f4f0;
+	background-color: #fff;
+	border-radius: 0 0 1rem 0;
+}
+.settings-btn[data-v-1cf27b2a] {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.75rem;
+	background-color: #f8f9fa;
+	border-radius: 0.5rem;
+	transition: all 0.2s ease;
+	box-shadow: 0 0.0625rem 0.25rem rgba(0, 0, 0, 0.04);
+}
+.settings-btn[data-v-1cf27b2a]:active {
+	background-color: #e8f5e9;
+	box-shadow: 0 0.125rem 0.375rem rgba(76, 175, 80, 0.15);
+}
+.settings-icon[data-v-1cf27b2a] {
+	font-size: 1rem;
+}
+.settings-text[data-v-1cf27b2a] {
+	font-size: 0.9375rem;
+	color: #2c3e50;
+	font-weight: 500;
+}
+
+/* 侧边栏遮罩 */
+.sidebar-overlay[data-v-1cf27b2a] {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 999;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s ease;
+}
+.sidebar-overlay.show[data-v-1cf27b2a] {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* 响应式布局 - 横屏iPad适配 */
+@media screen and (min-width: 768px) {
+.header[data-v-1cf27b2a] {
+		padding: 1.25rem 1.5rem;
+}
+.main-content[data-v-1cf27b2a] {
+		padding: 1rem 1.5rem;
+}
+.partition-selector[data-v-1cf27b2a],
+	.layer-tabs[data-v-1cf27b2a] {
+		margin-left: 0.75rem;
+		margin-right: 0.75rem;
+}
+}
+@media screen and (min-width: 1024px) {
+.header[data-v-1cf27b2a] {
+		padding: 1.5rem 2rem;
+}
+.main-content[data-v-1cf27b2a] {
+		padding: 1.25rem 2rem;
+}
+.partition-selector[data-v-1cf27b2a],
+	.layer-tabs[data-v-1cf27b2a] {
+		margin-left: 1rem;
+		margin-right: 1rem;
+}
+.sidebar[data-v-1cf27b2a] {
+		width: 70%;
+		max-width: 18.75rem;
+		left: -70%;
+}
+}
