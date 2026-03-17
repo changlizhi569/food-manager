@@ -13,7 +13,7 @@
 			<scroll-view class="card-content" scroll-y>
 				<!-- 食材图片 -->
 				<view class="image-section" v-if="settings.showImage && ingredient.imagePath">
-					<image :src="ingredient.imagePath" class="ingredient-image" mode="aspectFill"></image>
+					<image :src="ingredient.imagePath" class="ingredient-image" mode="aspectFit"></image>
 				</view>
 
 				<!-- 食材信息 -->
@@ -254,17 +254,21 @@ export default {
 /* 图片区域 */
 .image-section {
 	width: 100%;
-	height: 320rpx;
+	height: 240rpx;
 	background-color: #f8f9fa;
 	border-radius: 24rpx;
 	overflow: hidden;
 	margin-bottom: 24rpx;
 	box-shadow: 0 4rpx 16rpx rgba(0, 0, 0, 0.06);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .ingredient-image {
 	width: 100%;
 	height: 100%;
+	object-fit: contain;
 }
 
 /* 信息区域 */
