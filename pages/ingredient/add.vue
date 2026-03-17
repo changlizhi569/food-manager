@@ -263,24 +263,28 @@ export default {
 		},
 		onFridgeChange(e) {
 			const index = e.detail.value;
-			this.ingredient.fridgeId = this.fridges[index].id;
-			this.ingredient.partitionId = '';
-			this.ingredient.layer = '';
-			this.updateLocation();
+			if (this.fridges && this.fridges[index]) {
+				this.ingredient.fridgeId = this.fridges[index].id;
+				this.ingredient.partitionId = '';
+				this.ingredient.layer = '';
+				this.updateLocation();
+			}
 		},
 		onPartitionChange(e) {
 			const index = e.detail.value;
 			const fridgePartitions = this.partitions.filter(p => p.fridgeId === this.ingredient.fridgeId);
-			this.ingredient.partitionId = fridgePartitions[index].id;
-			this.ingredient.layer = '';
-			this.updateLocation();
+			if (fridgePartitions && fridgePartitions[index]) {
+				this.ingredient.partitionId = fridgePartitions[index].id;
+				this.ingredient.layer = '';
+				this.updateLocation();
+			}
 		},
 		onLayerChange(e) {
 			const index = e.detail.value;
-			if (this.currentPartition && this.currentPartition.layers) {
+			if (this.currentPartition && this.currentPartition.layers && this.currentPartition.layers[index] !== undefined) {
 				this.ingredient.layer = this.currentPartition.layers[index];
+				this.updateLocation();
 			}
-			this.updateLocation();
 		},
 		updateLocation() {
 			const fridge = this.fridges.find(f => f.id === this.ingredient.fridgeId);
