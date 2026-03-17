@@ -149,7 +149,15 @@ class DataManager {
         // await indexedDBManager.deleteFridge(fridgeId);
         this.fridges = this.fridges.filter(f => f.id !== fridgeId);
         this.partitions = this.partitions.filter(p => p.fridgeId !== fridgeId);
-        this.ingredients = this.ingredients.filter(i => i.fridgeId !== fridgeId);
+        // 不删除食材，而是将食材的存放位置设置为空
+        this.ingredients.forEach(ingredient => {
+            if (ingredient.fridgeId === fridgeId) {
+                ingredient.fridgeId = '';
+                ingredient.partitionId = '';
+                ingredient.layer = '';
+                ingredient.location = '';
+            }
+        });
         this.saveData();
     }
 
@@ -165,6 +173,15 @@ class DataManager {
         const index = this.partitions.findIndex(p => p.id === partition.id);
         if (index !== -1) {
             this.partitions[index] = partition;
+            // 检查是否有食材的层数不在新的层数列表中，如果是则将其层数设置为空
+            this.ingredients.forEach(ingredient => {
+                if (ingredient.partitionId === partition.id) {
+                    const layer = parseInt(ingredient.layer);
+                    if (!partition.layers.includes(layer)) {
+                        ingredient.layer = '';
+                    }
+                }
+            });
             this.saveData();
         }
     }
@@ -172,7 +189,14 @@ class DataManager {
     async deletePartition(partitionId) {
         // await indexedDBManager.deletePartition(partitionId);
         this.partitions = this.partitions.filter(p => p.id !== partitionId);
-        this.ingredients = this.ingredients.filter(i => i.partitionId !== partitionId);
+        // 不删除食材，而是将食材的存放位置设置为空
+        this.ingredients.forEach(ingredient => {
+            if (ingredient.partitionId === partitionId) {
+                ingredient.partitionId = '';
+                ingredient.layer = '';
+                ingredient.location = '';
+            }
+        });
         this.saveData();
     }
 

@@ -32,8 +32,8 @@
 										v-model="editingFridgeName"
 										class="name-input"
 										focus
+										@blur="saveFridgeName(fridge.id)"
 									/>
-									<text class="save-btn" @click.stop="saveFridgeName(fridge.id)">保存</text>
 								</view>
 								<text v-else class="fridge-name" @click.stop="startEditFridgeName(fridge)">{{ fridge.name }}</text>
 								<text class="fridge-stats">{{ getPartitionsByFridgeId(fridge.id).length }} 个分区</text>
@@ -55,8 +55,8 @@
 											v-model="editingPartitionName"
 											class="field-input"
 											focus
+											@blur="savePartitionName(partition.id)"
 										/>
-										<text class="save-btn" @click.stop="savePartitionName(partition.id)">保存</text>
 									</view>
 									<text v-else class="partition-name" @click.stop="startEditPartitionName(partition)">{{ partition.name }}</text>
 
@@ -66,7 +66,6 @@
 									<picker mode="selector" :range="layerOptions" :value="editingPartitionLayers - 1" @change="onLayerChange">
 										<view class="picker-value">{{ editingPartitionLayers }}层</view>
 									</picker>
-									<text class="save-btn" @click.stop="savePartitionLayers(partition.id)">保存</text>
 								</view>
 								<view v-else class="partition-layers" @click.stop="startEditPartitionLayers(partition)">
 									<text class="layer-display">层数：{{ partition.layers.length }}层</text>
@@ -214,6 +213,14 @@ export default {
 		},
 		onLayerChange(e) {
 			this.editingPartitionLayers = parseInt(e.detail.value) + 1;
+			// 自动保存层数
+			const partition = this.partitions.find(p => p.id === this.editingPartitionId);
+			if (partition) {
+				partition.layers = Array.from({ length: this.editingPartitionLayers }, (_, i) => i + 1);
+				dataManager.updatePartition(partition);
+			}
+			this.editingPartitionId = null;
+			this.editingPartitionField = '';
 		},
 		async savePartitionLayers(partitionId) {
 			const layerCount = this.editingPartitionLayers;
